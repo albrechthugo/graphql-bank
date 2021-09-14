@@ -1,0 +1,7 @@
+<po-table [p-columns]="columns" [p-items]="friends">
+  <ng-template p-table-cell-template let-column="column" let-row="row">
+    <po-button p-type="link" p-label="Transferir" (p-click)="transactionModal.open(row)"></po-button>
+  </ng-template>
+</po-table>
+
+<app-transaction-modal #transactionModal></app-transaction-modal>

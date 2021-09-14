@@ -1,0 +1,13 @@
+<po-modal [p-title]="title!" [p-primary-action]="modalActions[1]" [p-secondary-action]="modalActions[0]">
+  <form [formGroup]="form">
+    <po-number formControlName="amount" p-label="Quantia" p-clean="true" p-placeholder="0,00"></po-number>
+
+    <po-textarea
+      formControlName="message"
+      p-label="Mensagem"
+      [p-maxlength]="100"
+      [p-optional]="true"
+      p-placeholder="Pagamento referente ao lanche do final de semana"
+    ></po-textarea>
+  </form>
+</po-modal>
