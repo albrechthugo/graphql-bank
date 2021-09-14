@@ -2,7 +2,7 @@ import { PoModalComponent } from '@po-ui/ng-components'
 import { friend as friendMock } from './../../mocks/friend/friendMock'
 import { TransactionModalComponent } from './transaction-modal.component'
 
-describe('TransactionModalComponent', () => {
+describe('<app-transaction-modal>', () => {
   const component = new TransactionModalComponent()
   let modal: jasmine.SpyObj<PoModalComponent>
 
