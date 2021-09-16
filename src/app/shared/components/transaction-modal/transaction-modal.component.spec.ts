@@ -1,13 +1,20 @@
 import { PoModalComponent } from '@po-ui/ng-components'
+import { of } from 'rxjs'
+import { FriendsService } from 'src/app/services/friends.service'
 import { friend as friendMock } from './../../mocks/friend/friendMock'
 import { TransactionModalComponent } from './transaction-modal.component'
 
 describe('<app-transaction-modal>', () => {
-  const component = new TransactionModalComponent()
+  let component: TransactionModalComponent
   let modal: jasmine.SpyObj<PoModalComponent>
+  let friendsService: jasmine.SpyObj<FriendsService>
 
   beforeEach(() => {
     modal = jasmine.createSpyObj<PoModalComponent>(['open', 'close'])
+    friendsService = jasmine.createSpyObj<FriendsService>(['doTransferToFriend'])
+
+    component = new TransactionModalComponent(friendsService)
+
     component.modal = modal
   })
 
@@ -36,8 +43,32 @@ describe('<app-transaction-modal>', () => {
   })
 
   it('should send transfer', () => {
+    friendsService.doTransferToFriend.and.returnValue(of(null))
+
+    component.open(friendMock)
+
+    component.form.get('amount')?.setValue(10)
+
     component['sendTransfer']()
 
+    expect(friendsService.doTransferToFriend).toHaveBeenCalledWith({
+      amount: 510,
+      destinyFriendId: '1',
+      message: null!
+    })
+
     expect(component.modal!.close).toHaveBeenCalled()
+  })
+
+  it(`shouldn't send transfer if form is invalid`, () => {
+    friendsService.doTransferToFriend.and.returnValue(of(null))
+
+    component.open(friendMock)
+
+    component['sendTransfer']()
+
+    expect(friendsService.doTransferToFriend).not.toHaveBeenCalled()
+
+    expect(component.modal!.close).not.toHaveBeenCalled()
   })
 })

@@ -1,3 +1,5 @@
+import { Transaction } from './../models/transaction'
+import { DO_TRANSFER } from './../graphql/mutations'
 import { Injectable } from '@angular/core'
 import { ApolloQueryResult } from '@apollo/client/core'
 import { Apollo } from 'apollo-angular'
@@ -17,5 +19,15 @@ export class FriendsService {
     return this.apollo.watchQuery<FriendsResponse>({
       query: GET_FRIENDS
     }).valueChanges
+  }
+
+  doTransferToFriend(transaction: Transaction): Observable<any> {
+    return this.apollo.mutate({
+      mutation: DO_TRANSFER,
+      variables: {
+        id: transaction.destinyFriendId,
+        balance: transaction.amount
+      }
+    })
   }
 }
