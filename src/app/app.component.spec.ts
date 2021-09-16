@@ -19,7 +19,7 @@ describe('<app-root>', () => {
     expect(app.title).toEqual('Angular GraphQL Bank')
   })
 
-  it(`should mark statementTabIsActive as true transactionsTabIsActive as false and  when router emit the activate event with 'BankStatementComponent'`, () => {
+  it(`should mark statementTabIsActive as true and transactionsTabIsActive as false when router emit the activate event with 'BankStatementComponent'`, () => {
     expect(app.statementTabIsActive).toBeFalse()
     expect(app.transactionsTabIsActive).toBeFalse()
 
@@ -29,7 +29,7 @@ describe('<app-root>', () => {
     expect(app.transactionsTabIsActive).toBeFalse()
   })
 
-  it(`should mark transactionsTabIsActive as true statementTabIsActive as false and  when router emit the activate event with 'BankStatementComponent'`, () => {
+  it(`should mark transactionsTabIsActive as true and statementTabIsActive as false when router emit the activate event with 'TransactionsComponent'`, () => {
     expect(app.statementTabIsActive).toBeFalse()
     expect(app.transactionsTabIsActive).toBeFalse()
 
