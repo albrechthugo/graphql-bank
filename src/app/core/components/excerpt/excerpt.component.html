@@ -1,0 +1,15 @@
+<po-page-default [p-title]="title!" [p-actions]="actions">
+  <div class="po-row">
+    <po-widget
+      class="po-lg-6"
+      [p-height]="200"
+      p-primary-label="Visualizar"
+      p-title="Serviços"
+      (p-primary-action)="detailsModal.open()"
+    >
+      <div class="po-font-subtitle po-text-center">Para acessar seu extrato, clique no botão abaixo</div>
+    </po-widget>
+  </div>
+</po-page-default>
+
+<app-excerpt-details-modal #detailsModal></app-excerpt-details-modal>

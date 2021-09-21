@@ -3,7 +3,7 @@ import { Friend } from './../../../models/friend'
 import { Component, ViewChild } from '@angular/core'
 import { PoModalAction, PoModalComponent } from '@po-ui/ng-components'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
-import { Transaction } from 'src/app/models/transaction'
+import { DoTransaction } from 'src/app/models/transaction'
 
 @Component({
   selector: 'app-transaction-modal',
@@ -46,7 +46,7 @@ export class TransactionModalComponent {
   private sendTransfer(): void {
     if (this.form.invalid) return
 
-    const transaction: Transaction = {
+    const transaction: DoTransaction = {
       destinyFriendId: this.form.get('friendId')?.value,
       amount: this.form.get('friendBalance')?.value + this.form.get('amount')?.value,
       message: this.form.get('message')?.value

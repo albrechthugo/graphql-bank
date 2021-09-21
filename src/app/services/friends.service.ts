@@ -1,4 +1,4 @@
-import { Transaction } from './../models/transaction'
+import { DoTransaction } from './../models/transaction'
 import { DO_TRANSFER } from './../graphql/mutations'
 import { Injectable } from '@angular/core'
 import { ApolloQueryResult } from '@apollo/client/core'
@@ -21,7 +21,7 @@ export class FriendsService {
     }).valueChanges
   }
 
-  doTransferToFriend(transaction: Transaction): Observable<any> {
+  doTransferToFriend(transaction: DoTransaction): Observable<any> {
     return this.apollo.mutate({
       mutation: DO_TRANSFER,
       variables: {
