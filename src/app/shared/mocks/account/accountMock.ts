@@ -13,7 +13,9 @@ export const transactions: Array<GetTransaction> = [
   {
     type: 'CREDIT',
     amount: 10,
-    destinyFriendName: 'Mock Friend Name'
+    destinyFriendName: 'Mock Friend Name',
+    destinyFriendId: 'mock-uuid',
+    message: 'Test message'
   }
 ]
 

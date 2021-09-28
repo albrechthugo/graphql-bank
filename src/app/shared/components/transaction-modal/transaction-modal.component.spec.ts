@@ -52,7 +52,7 @@ describe('<app-transaction-modal>', () => {
     component['sendTransfer']()
 
     expect(friendsService.doTransferToFriend).toHaveBeenCalledWith({
-      amount: 510,
+      amount: 10,
       destinyFriendId: '1',
       message: null!
     })

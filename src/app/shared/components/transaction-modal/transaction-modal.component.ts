@@ -23,7 +23,6 @@ export class TransactionModalComponent {
 
   form = new FormGroup({
     friendId: new FormControl(null, Validators.required),
-    friendBalance: new FormControl(null, Validators.required),
     amount: new FormControl(null, Validators.required),
     message: new FormControl(null, Validators.maxLength(100))
   })
@@ -32,7 +31,6 @@ export class TransactionModalComponent {
 
   open(friend: Friend): void {
     this.form.reset()
-    this.form.get('friendBalance')?.setValue(friend.balance)
     this.form.get('friendId')?.setValue(friend.id)
     this.title = `Transferindo para ${friend.name}`
     this.modal?.open()
@@ -48,7 +46,7 @@ export class TransactionModalComponent {
 
     const transaction: DoTransaction = {
       destinyFriendId: this.form.get('friendId')?.value,
-      amount: this.form.get('friendBalance')?.value + this.form.get('amount')?.value,
+      amount: this.form.get('amount')?.value,
       message: this.form.get('message')?.value
     }
 

@@ -37,7 +37,9 @@ describe('<app-excerpt-details-modal>', () => {
       {
         amount: 10,
         destinyFriendName: 'Mock Friend Name',
-        type: 'CREDIT'
+        type: 'CREDIT',
+        destinyFriendId: 'mock-uuid',
+        message: 'Test message'
       }
     ])
   }))
