@@ -8,4 +8,6 @@ export type GetTransaction = {
   type: 'CREDIT' | 'DEBIT'
   amount: number
   destinyFriendName: string
+  destinyFriendId: string
+  message?: string
 }

@@ -21,12 +21,14 @@ export class FriendsService {
     }).valueChanges
   }
 
-  doTransferToFriend(transaction: DoTransaction): Observable<any> {
+  doTransferToFriend({ destinyFriendId, message, amount }: DoTransaction): Observable<any> {
     return this.apollo.mutate({
       mutation: DO_TRANSFER,
       variables: {
-        id: transaction.destinyFriendId,
-        balance: transaction.amount
+        destinyFriendId,
+        amount,
+        type: 'DEBIT',
+        message
       }
     })
   }

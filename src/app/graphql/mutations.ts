@@ -1,9 +1,9 @@
 import { gql } from 'apollo-angular'
 
 export const DO_TRANSFER = gql`
-  mutation doTransfer($id: ID!, $balance: Int!) {
-    updateFriend(where: { id: $id }, data: { balance: $balance }) {
-      balance
+  mutation doTransfer($destinyFriendId: String!, $amount: Float!, $type: String!, $message: String!) {
+    transaction(amount: $amount, type: $type, message: $message, destinyFriendId: $destinyFriendId) {
+      destinyFriendId
     }
   }
 `
