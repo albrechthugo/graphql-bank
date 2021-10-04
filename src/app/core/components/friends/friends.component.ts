@@ -1,6 +1,6 @@
 import { FriendsService } from 'src/app/services/friends.service'
 import { Component, OnInit } from '@angular/core'
-import { Friend } from 'src/app/models/friend'
+import { Friend } from 'src/app/core/entities/friend'
 import { PoTableColumn } from '@po-ui/ng-components'
 
 @Component({

@@ -1,10 +1,10 @@
+import { Account } from 'src/app/core/entities/account'
+import { GetTransaction } from 'src/app/core/entities/transaction'
 import { Injectable } from '@angular/core'
 import { ApolloQueryResult } from '@apollo/client/core'
 import { Apollo } from 'apollo-angular'
 import { Observable } from 'rxjs'
-import { GetTransaction } from '../models/transaction'
 import { GET_ACCOUNT, GET_ACCOUNT_TRANSACTIONS } from './../graphql/queries'
-import { Account } from './../models/account'
 
 type AccountResponse = {
   account: Account

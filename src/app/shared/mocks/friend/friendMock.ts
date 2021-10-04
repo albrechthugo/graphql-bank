@@ -1,5 +1,5 @@
 import { ApolloQueryResult } from '@apollo/client/core'
-import { Friend } from 'src/app/models/friend'
+import { Friend } from 'src/app/core/entities/friend'
 
 export const friend: Friend = {
   id: '1',

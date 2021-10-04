@@ -1,11 +1,11 @@
-import { DoTransaction } from './../models/transaction'
+import { Friend } from 'src/app/core/entities/friend'
+import { DoTransaction } from 'src/app/core/entities/transaction'
 import { DO_TRANSFER } from './../graphql/mutations'
 import { Injectable } from '@angular/core'
 import { ApolloQueryResult } from '@apollo/client/core'
 import { Apollo } from 'apollo-angular'
 import { Observable } from 'rxjs'
 import { GET_FRIENDS } from '../graphql/queries'
-import { Friend } from '../models/friend'
 
 type FriendsResponse = {
   friends: Array<Friend>

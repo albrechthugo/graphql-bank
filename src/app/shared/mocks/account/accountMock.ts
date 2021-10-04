@@ -1,6 +1,6 @@
-import { GetTransaction } from './../../../models/transaction'
 import { ApolloQueryResult } from '@apollo/client/core'
-import { Account } from './../../../models/account'
+import { Account } from 'src/app/core/entities/account'
+import { GetTransaction } from 'src/app/core/entities/transaction'
 
 export const account: Account = {
   id: '1',

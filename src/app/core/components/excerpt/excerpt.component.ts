@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { PoPageAction } from '@po-ui/ng-components'
-import { Account } from 'src/app/models/account'
+import { Account } from 'src/app/core/entities/account'
 import { AccountService } from 'src/app/services/account.service'
 
 @Component({

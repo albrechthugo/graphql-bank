@@ -1,7 +1,7 @@
-import { AccountService } from './../../../services/account.service'
-import { GetTransaction } from './../../../models/transaction'
 import { Component, ViewChild } from '@angular/core'
 import { PoModalAction, PoModalComponent, PoTableColumn } from '@po-ui/ng-components'
+import { GetTransaction } from 'src/app/core/entities/transaction'
+import { AccountService } from 'src/app/services/account.service'
 
 @Component({
   selector: 'app-excerpt-details-modal',
@@ -20,8 +20,8 @@ export class ExcerptDetailsModalComponent {
   }
 
   columns: Array<PoTableColumn> = [
-    { property: 'destinyFriendName', label: 'Destino', width: '70%' },
-    { property: 'amount', label: 'Valor', width: '30%' }
+    { property: 'destinyFriendName', label: 'Entidade', width: '70%' },
+    { property: 'amount', label: 'Valor', width: '30%', type: 'cellTemplate' }
   ]
 
   constructor(private accountService: AccountService) {}

@@ -1,9 +1,9 @@
 import { FriendsService } from 'src/app/services/friends.service'
-import { Friend } from './../../../models/friend'
 import { Component, ViewChild } from '@angular/core'
 import { PoModalAction, PoModalComponent } from '@po-ui/ng-components'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
-import { DoTransaction } from 'src/app/models/transaction'
+import { Friend } from 'src/app/core/entities/friend'
+import { DoTransaction } from 'src/app/core/entities/transaction'
 
 @Component({
   selector: 'app-transaction-modal',
