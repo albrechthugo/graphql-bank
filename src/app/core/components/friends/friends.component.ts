@@ -13,7 +13,6 @@ export class FriendsComponent implements OnInit {
   friends: Array<Friend> = []
 
   columns: Array<PoTableColumn> = [
-    { property: 'id', label: '#', width: '10%' },
     { property: 'name', label: 'Nome', width: '50%' },
     { property: 'username', label: 'Usuário', width: '30%' },
     { property: 'action', label: ' ', width: '10%', type: 'cellTemplate' }
