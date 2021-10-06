@@ -1,5 +1,5 @@
-<po-modal p-title="Últimas movimentações" [p-primary-action]="action">
-  <po-table [p-items]="transactions!" [p-columns]="columns">
+<po-modal data-cy="excerpt-detail-modal" p-title="Últimas movimentações" [p-primary-action]="action">
+  <po-table data-cy="excerpt-table" [p-items]="transactions!" [p-columns]="columns">
     <ng-template p-table-cell-template let-column="column" let-row="row">
       <span [style]="row?.transaction | transactionType">{{ row.amount | currency: 'BRL' }}</span>
     </ng-template>

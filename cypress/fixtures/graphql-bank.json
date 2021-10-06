@@ -1,0 +1,35 @@
+{
+  "seletor": {
+    "pageTitle": ".po-page-header:first-child",
+    "accountDetailsTitle": "[data-cy=account-details-page]",
+    "accountDetailsTab": ".po-tabs-container > .po-tabs-header > po-tab-button:nth-child(1)",
+    "transactionsTab": ".po-tabs-container > .po-tabs-header > po-tab-button:nth-child(2)",
+    "friendsTable": "[data-cy=friends-table]",
+    "friendsTableFirstRowNameColumn": ":nth-child(2) > .po-table-row > :nth-child(1)",
+    "transferButton": ":nth-child(2) > .po-table-row .po-table-column-cell > :nth-child(1) > [data-cy=transfer-button] > .po-button",
+    "serviceWidget": "[data-cy=service-widget]",
+    "serviceWidgetButton": "[data-cy=service-widget] #primaryAct",
+    "transactionModal": "[data-cy=transaction-modal]",
+    "transactionModalAmountInput": "[data-cy=transaction-modal-amount-input] input",
+    "transactionModalMessageInput": "[data-cy=transaction-modal-message-input] textarea",
+    "transactionModalSaveButton": "[data-cy=transaction-modal] .po-button-modal-first-action > .po-button",
+    "excerptDetailModal": "[data-cy=excerpt-detail-modal]",
+    "excerptDetailModalCloseButton": "[data-cy=excerpt-detail-modal] .po-button-modal-first-action > .po-button",
+    "excerptTable": "[data-cy=excerpt-table]",
+    "excerptTableFirstTransactionRow": "[data-cy=excerpt-table] :nth-child(2) > .po-table-row"
+  },
+  "value": {
+    "pageTitleValue": "Angular GraphQL Bank",
+    "accountDetailsTitleValue": "Bem vindo, Alan Turing",
+    "accountDetailsTabTitleValue": "Detalhes da conta",
+    "transactionsTabTitleValue": "Realizar transações",
+    "transferButtonLabelValue": "Transferir",
+    "serviceWidgetLabelValue": "Para acessar seu extrato, clique no botão abaixo",
+    "serviceWidgetButtonLabelValue": "Visualizar",
+    "transactionModalTitleValue": "Transferindo para {name}",
+    "transactionModalAmountValue": "123.20",
+    "transactionModalMessageValue": "Eu gosto do Cypress",
+    "excerptDetailModalTitleValue": "Últimas movimentações",
+    "excerptTableFirstTransactionRowValue": "R${amount}"
+  }
+}

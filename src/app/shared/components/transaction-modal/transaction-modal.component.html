@@ -1,8 +1,20 @@
-<po-modal [p-title]="title!" [p-primary-action]="modalActions[1]" [p-secondary-action]="modalActions[0]">
+<po-modal
+  data-cy="transaction-modal"
+  [p-title]="title!"
+  [p-primary-action]="modalActions[1]"
+  [p-secondary-action]="modalActions[0]"
+>
   <form [formGroup]="form">
-    <po-number formControlName="amount" p-label="Quantia" p-clean="true" p-placeholder="0,00"></po-number>
+    <po-number
+      data-cy="transaction-modal-amount-input"
+      formControlName="amount"
+      p-label="Quantia"
+      p-clean="true"
+      p-placeholder="0,00"
+    ></po-number>
 
     <po-textarea
+      data-cy="transaction-modal-message-input"
       formControlName="message"
       p-label="Mensagem"
       [p-maxlength]="100"
